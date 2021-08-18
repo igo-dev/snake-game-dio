@@ -9,7 +9,7 @@ snake[0] = {
 }
 
 //Draws background on screen.
-function setBG() {
+function drawBg() {
     ctx.fillStyle = 'red';
     ctx.fillRect(0, 0, 16 * box, 16 * box);
 }
@@ -23,5 +23,5 @@ function drawSnake() {
     }
 }
 
-setBG();
+drawBg();
 drawSnake();
