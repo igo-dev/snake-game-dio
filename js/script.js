@@ -8,6 +8,10 @@ snake[0] = {
     y: 8 * box
 }
 let direction = 'right';
+let food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
 
 //Draws background on screen.
 function drawBg() {
@@ -21,6 +25,12 @@ function drawSnake() {
         ctx.fillStyle = 'green';
         ctx.fillRect(snake[i].x, snake[i].y, box, box)
     }
+}
+
+//Draws food on screen.
+function drawFood() {
+    ctx.fillStyle =  'yellow';
+    ctx.fillRect(food.x, food.y, box, box);
 }
 
 //Sends the event to the update handler.
@@ -43,6 +53,7 @@ function runGame() {
 
     drawBg();
     drawSnake();
+    drawFood()
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
