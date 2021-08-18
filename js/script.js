@@ -15,21 +15,21 @@ let food = {
 
 //Draws background on screen.
 function drawBg() {
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = '#03a';
     ctx.fillRect(0, 0, 16 * box, 16 * box);
 }
 
 //Draws snake on screen.
 function drawSnake() {
     for (let i = 0; i < snake.length; i++) {
-        ctx.fillStyle = 'green';
+        ctx.fillStyle = '#fb0';
         ctx.fillRect(snake[i].x, snake[i].y, box, box)
     }
 }
 
 //Draws food on screen.
 function drawFood() {
-    ctx.fillStyle =  'yellow';
+    ctx.fillStyle =  '#f20';
     ctx.fillRect(food.x, food.y, box, box);
 }
 
