@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+#cvs{
+    box-shadow: rgba(6, 135, 255, 0.5) 0px 0px 150px, rgb(3, 27, 82) 0px 0px 10px;
+    animation-name: pulseOpacity;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+#overlay{
+    position: absolute;
+    height: 512px;
+    width: 512px;
+    background-image: url(../images/overlay.png);
+    background-size: 3000px auto;
+    z-index: 1;
+}
+#fallback{
+    display: none;
+    position: absolute;
+    animation-name: pulseScale;
+    animation-duration: 1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@media (max-width: 600px) {
+    #cvs{
+        display: none;
+    }
+    #fallback{
+        display: block;
+        color:white;
+    }
+}
+@keyframes pulseScale{
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+@keyframes pulseOpacity{
+    0%{
+        Opacity: 1;
+    }
+    70%{
+        Opacity: 0.95;
+    }
+    100%{
+        Opacity: 1;
+    }
+}
