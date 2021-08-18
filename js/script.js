@@ -90,4 +90,4 @@ function runGame() {
     snake.unshift(newHead);
 }
 
-let jogo = setInterval(runGame, 100);
+let game = setInterval(runGame, 100);
